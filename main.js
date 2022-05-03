@@ -7,6 +7,7 @@ const playerScore = document.querySelector(".playerScore");
 const computerScore = document.querySelector(".computerScore");
 const resultContainer = document.querySelector(".resultContainer");
 const results = document.querySelector(".results");
+const playAgain = document.querySelector(".playAgain");
 
 let player = 0;
 let computer = 0;
@@ -82,3 +83,7 @@ function displayResults(state) {
     button.disabled = true;
   });
 }
+
+playAgain.addEventListener("click", function () {
+  window.location.reload();
+});
