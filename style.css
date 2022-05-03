@@ -75,3 +75,29 @@ button {
 button:hover {
   transform: translate(0, -10px);
 }
+
+.resultContainer {
+  position: absolute;
+  height: 27vh;
+  width: 20vw;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+  font-size: 3em;
+  border: 5px solid red;
+  border-radius: 20px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #222831;
+}
+
+.playAgain {
+  height: 8vh;
+  width: 10vw;
+  font-size: 0.5em;
+  color: #fac650;
+}
