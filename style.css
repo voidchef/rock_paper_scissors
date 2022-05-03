@@ -11,3 +11,34 @@ body {
   border: 2px solid transparent;
   margin: -8px -8px 8px -8px;
 }
+
+.container {
+  background-color: #222831;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 5vh;
+  margin: -8px -8px -8px -8px;
+}
+
+.textArea {
+  margin-top: 2vh;
+  font-size: 2em;
+  line-height: 2;
+}
+
+.playArea {
+  display: flex;
+  flex-direction: row;
+  gap: 2vw;
+  font-size: 7em;
+}
+
+.scoreArea {
+  color: #fac650;
+  display: flex;
+  flex-direction: row;
+  font-size: 2em;
+  gap: 2vw;
+}
