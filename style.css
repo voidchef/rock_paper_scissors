@@ -1,0 +1,13 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: #fac650;
+}
+
+.header {
+  background-color: #111720;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6em;
+  text-align: center;
+  border: 2px solid transparent;
+  margin: -8px -8px 8px -8px;
+}
