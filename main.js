@@ -2,6 +2,9 @@ const btn = document.querySelectorAll(".btn");
 const playerSign = document.querySelector(".playerSign");
 const computerSign = document.querySelector(".computerSign");
 
+let player = 0;
+let computer = 0;
+
 btn.forEach((button) => {
   button.addEventListener("click", function () {
     game(button.value);
@@ -17,6 +20,9 @@ function game(playerSelection) {
   playerSign.textContent = signs[playerSelection];
 
   let state = playRound(playerSelection, computerSelection);
+
+  if (state == "won") player++;
+  else if (state == "lost") computer++;
 }
 
 function computerPlay() {
