@@ -3,6 +3,10 @@ const playerSign = document.querySelector(".playerSign");
 const computerSign = document.querySelector(".computerSign");
 const gameStatus = document.querySelector(".gameStatus");
 const description = document.querySelector(".description");
+const playerScore = document.querySelector(".playerScore");
+const computerScore = document.querySelector(".computerScore");
+const resultContainer = document.querySelector(".resultContainer");
+const results = document.querySelector(".results");
 
 let player = 0;
 let computer = 0;
@@ -27,6 +31,12 @@ function game(playerSelection) {
   else if (state == "lost") computer++;
 
   displayStatus(state, playerSelection, computerSelection);
+
+  playerScore.textContent = player;
+  computerScore.textContent = computer;
+
+  if (player === 5 || computer === 5)
+    displayResults(player === 5 ? "won" : "lost");
 }
 
 function computerPlay() {
@@ -60,4 +70,15 @@ function displayStatus(state, playerSelection, computerSelection) {
     description.textContent = `${computerSelection} beats ${playerSelection}`;
   else
     description.textContent = `${playerSelection} ties with ${computerSelection}`;
+}
+
+function displayResults(state) {
+  document.querySelector(".header").style.filter = "blur(2px)";
+  document.querySelector(".container").style.filter = "blur(2px)";
+  resultContainer.style.display = "flex";
+  results.textContent = `You ${state}`;
+
+  btn.forEach((button) => {
+    button.disabled = true;
+  });
 }
