@@ -1,6 +1,8 @@
 const btn = document.querySelectorAll(".btn");
 const playerSign = document.querySelector(".playerSign");
 const computerSign = document.querySelector(".computerSign");
+const gameStatus = document.querySelector(".gameStatus");
+const description = document.querySelector(".description");
 
 let player = 0;
 let computer = 0;
@@ -23,6 +25,8 @@ function game(playerSelection) {
 
   if (state == "won") player++;
   else if (state == "lost") computer++;
+
+  displayStatus(state, playerSelection, computerSelection);
 }
 
 function computerPlay() {
@@ -44,4 +48,16 @@ function playRound(playerSelection, computerSelection) {
     return "lost";
   else if (playerSelection === "scissors" && computerSelection === "paper")
     return "won";
+}
+
+function displayStatus(state, playerSelection, computerSelection) {
+  if (state === "tie") gameStatus.textContent = `It's a ${state}!`;
+  else gameStatus.textContent = `You ${state}!`;
+
+  if (state === "won")
+    description.textContent = `${playerSelection} beats ${computerSelection}`;
+  else if (state === "lost")
+    description.textContent = `${computerSelection} beats ${playerSelection}`;
+  else
+    description.textContent = `${playerSelection} ties with ${computerSelection}`;
 }
