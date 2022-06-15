@@ -4,7 +4,9 @@ Project to create Rock Paper Scissors game using only HTML, CSS and Vanilla JS.
 
 ## Live Demo
 
-[Rock Paper Scissors](https://voidchef.github.io/calculator/)
+[Rock Paper Scissors](https://voidchef.github.io/rock_paper_scissors/)
+
+![rps](https://user-images.githubusercontent.com/79092620/173858076-bb336e08-0524-4d3d-b99b-ea9e05b4648b.png)
 
 **Note:** This Website works best with High Resolution Screens (1080p and up). Check the [improvements section](#improvements) for future updates.
 
